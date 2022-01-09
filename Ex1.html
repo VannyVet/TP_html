@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+    <canvas id="canvas"  ></canvas>
+    <p>Canvas :Insert me an image please!</p>
+    <input id="input" type="file" >
+
+    
+    <script>
+     const input=document.getElementById("input");
+     input.addEventListener('change', handleImage, false);
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+   
+
+     function handleImage(uploadedImageFile)
+     {
+        var reader =new FileReader();
+      reader.onload =function (event)
+      {
+          var img=new Image();
+          img.onload=function()
+          {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img,0,0);
+          }
+          img.src = event.target.result;
+      }
+      reader.readAsDataURL(uploadedImageFile.target.files[0])
+     }
+     input.addEventListener('click', function()
+     {
+          let src = cv.imread('canvas');
+        let dst = new cv.Mat();
+        // You can try more different parameters
+        let rect = new cv.Rect(100, 100, 200, 200);
+        dst = src.roi(rect);
+        cv.imshow('Canvas1', dst);
+        src.delete();
+        dst.delete();
+     });
+  
+
+      
+    </script>
+
+
+  
+</body>
+</html>

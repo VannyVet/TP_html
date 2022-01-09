@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css/Ex04.css">
+</head>
+<body>
+    <div class="container">
+        <div class="add">
+           <div class="menu">
+               <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                         <label>Name</label>
+                         <input type="text" name="input" clsss="input" >
+                   </div>
+                   <div>
+                         <label for="">Category</label>
+                        <input type="text" Name="price"  clsss="input">
+                 
+                    </div>
+                   <div>
+                         <label for="">Price &nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" name="coding" clsss="input" onclick='managedata'>
+                      
+                   </div>
+                   <div class="button">
+                       <input type="button" name="add" value="add" class="btn-add"> 
+                   </div>
+                
+               </form>
+             
+           </div>
+               
+        </div>
+        <div class="view"> 
+            <div class="book" id="b1" >
+                <div class="text">
+                    <table>
+                    <tr>
+                        <td>Name</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Price
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                    </tr>
+                      
+                    </table>
+                </div> 
+               <div class="img">
+                     <img src="book4.jpg" alt="" width="100px" height="100px">
+               </div>
+                <div class="button">
+                   <button class="delete">Delete</button>
+                   <button class="change_name">Chang name</button>
+                </div>
+            </div>
+            <div class="book" id="b2" >
+                <div class="text">
+                    <table>
+                    <tr>
+                        <td>Name</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Price
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                    </tr>
+                      
+                    </table>
+                </div> 
+               <div class="img">
+                     <img src="book4.jpg" alt="" width="100px" height="100px">
+               </div>
+                <div class="button">
+                   <button class="delete">Delete</button>
+                   <button class="change_name">Chang name</button>
+                </div>
+            </div>
+            <div class="book" id="b1" >
+                <div class="text">
+                    <table>
+                    <tr>
+                        <td>Name</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Price
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                    </tr>
+                      
+                    </table>
+                </div> 
+               <div class="img">
+                     <img src="book4.jpg" alt="" width="100px" height="100px">
+               </div>
+                <div class="button">
+                   <button class="delete">Delete</button>
+                   <button class="change_name">Chang name</button>
+                </div>
+            </div>
+            
+            
+            
+            
+           
+        </div>
+    </div>
+</body>
+<script>
+ var selectedRow = null;
+ let x = -1;
+ var names = [];
+ var price = [];
+var category = [];
+function onFormSubmit(e) {
+                event.preventDefault();
+                var formData = readFormData();
+                if (selectedRow === null) {
+                    insertNewRecord(formData);
+                    console.log("hello")
+                } else {
+                    updateRecord(formData);
+                }
+                resetForm();
+            }
+
+            //clear placeholder
+            document.querySelector('.add_book').placeholder = '';
+            
+            //Retrieve the data
+            function readFormData() {
+                var formData = {};
+                formData["name"] = document.getElementById("name_book").value;
+                formData["price"] = document.getElementById("price_book").value;
+                formData["category"] = document.getElementById("category_book").value;
+
+                return formData;
+            }
+
+</script>
+</html>
