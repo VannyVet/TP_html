@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding:0;
+}
+.background
+{
+   width: 400px;
+   height: 550px;
+   background-color: rgb(216, 203, 203);
+   position: relative;
+   left: 30%;
+}
+.button
+{
+     
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 120%;
+  
+}
+.button button
+{
+    width: 90px;
+    height: 30px;
+    color: white;
+    background-color: gray;
+}
+ h1
+{
+    
+    position: absolute;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 40%;
+    color: blue;
+    
+   
+}
+#counterValue
+{
+  text-align: center;
+  font-size: 110px;
+  margin-left: 40%;
+    margin-top:60%;
+    color: green;
+}

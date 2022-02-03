@@ -1,0 +1,99 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.Container
+{
+    width:100%;
+    height: 100vh;
+    background-color: rgb(221, 220, 220);
+    padding: 0;
+    margin: 0;
+   
+}
+.menu_bar
+{
+    width:95%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10px;
+
+    position: relative;
+  
+    
+}
+h3
+{
+    margin-left: 15px;
+    position: absolute;
+    
+}
+.manu
+{
+ position: absolute;
+ right: 5%;
+
+}
+nav ul
+{
+   list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin:  0 5px ;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+nav ul li a 
+{
+    text-decoration: none;
+    
+}
+nav ul li a:hover
+{
+    color: white;
+}
+
+nav .btn i{
+position: absolute;
+
+cursor: pointer;
+display: none;
+}
+
+#click
+{
+    display: none;
+}
+@media  (max-width: 850px) {
+  
+    nav .btn i{ 
+       display: block;
+       right: 10px;
+    }
+    label .menu_bar{
+
+        width: 89.2%;
+        height: 300px; 
+       background-color: white; 
+       margin-bottom: 50px;  
+       display: block;  
+
+     
+    }
+    nav ul li
+    {
+        position: fixed;
+        display: block;
+        margin: 70px 350px -50px 0;
+        left: -100%;
+     
+    }
+    #click:checked ~ ul li {
+        left: 0%;
+        position: relative;
+    }
+}
+
